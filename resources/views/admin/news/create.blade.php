@@ -34,7 +34,7 @@
             <div class="col-md-10">
               <input type="file" class="form-control-file" name="image">
             </div>
-            @csrf
+            {{ csrf_field() }}
             <input type="submit" class="btn btn-primary" value="更新">
           </form>
         </div>

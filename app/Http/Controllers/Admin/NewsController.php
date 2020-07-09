@@ -43,8 +43,7 @@ class NewsController extends Controller
       $posts = News::where('title', $cond_title)->get();
     } else {
       $posts = News::all();
-    }
-    return view('admin.news.index', ['posts' => $posts, 'cond_title' => $cond_title]);
+;
   }
 
   public function edit(Request $request)
@@ -65,11 +64,11 @@ class NewsController extends Controller
        $news_form['image_path'] = null;
      } elseif ($request->file('image')) {
        $path = Storage::disk('s3')->putFile('/',$form['image'],'public');
-       $news_form['image_path'] = Storage::disk('s3')->url($path);
+       $news->image_path = Storage::disk('s3')->url($path);
      } else {
        $news_form['image_path'] = $news->image_path;
      }
-     
+
      unset($news_form['_token']);
      unset($news_form['image']);
      unset($news_form['remove']);
@@ -91,3 +90,4 @@ class NewsController extends Controller
     return redirect('admin/news/');
   }
 }
+

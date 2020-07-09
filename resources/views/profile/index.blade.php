@@ -1,5 +1,10 @@
 @extends('layouts.front')
-<h1> プロフィール一覧</h1>
+<div class="container">
+  <hr color="#c0c0c0">
+  <div class="row">
+    <h1> プロフィール一覧</h1>
+  </div>
+</div>
 
 @section('content') 
   <div class="container">

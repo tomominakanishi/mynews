@@ -1,6 +1,5 @@
 @extends('layouts.front')
 <div class="container">
-  <hr color="#c0c0c0">
   <div class="row">
     <h1> プロフィール一覧</h1>
   </div>

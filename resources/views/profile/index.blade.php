@@ -1,10 +1,11 @@
 @extends('layouts.front')
 
-@section('content')
+@section('content') 
   <div class="container">
     <hr color="#c0c0c0">
     <div class="row">
       <div class="profiles col-md-8 mx-auto mt-3">
+        <h1> プロフィール一覧</h1>
         @foreach($profiles as $profile)
           <div class="profile">
             <div class="row">
